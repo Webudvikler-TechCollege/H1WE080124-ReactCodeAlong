@@ -5,15 +5,15 @@ import { Header } from './components/Header/Header'
 
 function App() {
 
-  const btnClick = () => {
-    alert('You clicked the button.')
+  const eventClick = () => {
+    alert('You clicked this button')
   }
 
   return (
     <>
       <Header />
       <main>
-        <Button textValue="Køb" bgColor="purple" clickEvent={btnClick} />
+        <Button color="red" textValue="Klik her!" clickEvent={eventClick}></Button>
       </main>
       <Footer />
     </>

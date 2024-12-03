@@ -1,6 +1,6 @@
 export const Button = ({ textValue, bgColor, clickEvent }) => {
 	
   return (
-	<button onClick={() => clickEvent()} style={{ color: bgColor }}>{ textValue }</button>
+  	<button style={{ color: bgColor }} onClick={() => clickEvent()}>{ textValue }</button>
   )
 }
