@@ -1,25 +1,19 @@
 import './App.scss'
-import { Button } from './components/Button/Button'
+import { Container } from './components/Container/Container'
 import { Dishes } from './components/Dishes/Dishes'
 import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
+import { Main } from './components/Main/Main'
 
 function App() {
-
-  const eventClick = () => {
-    alert('You clicked this button')
-  }
-
   return (
-    <>
+    <Container width="1024">
       <Header />
-      <main>
-        <Button color="red" textValue="Klik her!" clickEvent={eventClick}></Button>
-
+      <Main>
         <Dishes />
-      </main>
+      </Main>
       <Footer />
-    </>
+    </Container>
   )
 }
 

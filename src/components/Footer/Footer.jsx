@@ -1,9 +1,10 @@
-import styles from './Footer.module.scss'
+import { FooterStyle } from "./Footer.styled"
+
 
 export const Footer = () => {
 	return (
-		<footer>
-			<p className={styles.disclaimer}>&copy; TechCollege</p>
-		</footer>
+		<FooterStyle>
+			<p>&copy; TechCollege</p>
+		</FooterStyle>
 	)
 }
