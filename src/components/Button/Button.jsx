@@ -1,6 +1,11 @@
-export const Button = ({ textValue, bgColor, clickEvent }) => {
-	
-  return (
-  	<button style={{ color: bgColor }} onClick={() => clickEvent()}>{ textValue }</button>
-  )
+import { ButtonStyle } from "./Button.styled"
+
+export const Button = ({textValue, size, theme}) => {
+
+	return (
+		<ButtonStyle className={`${theme} ${size}`}>
+			{textValue}
+		</ButtonStyle>
+		
+	)
 }
