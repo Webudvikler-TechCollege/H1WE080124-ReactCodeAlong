@@ -1,18 +1,16 @@
 import { DishesStyle } from "./Dishes.styled"
 
-export const Dishes = () => {
+/**
+ * Dishes tager et data array via props og mapper det
+ * Arrayet bygges altså der hvor komponentet kaldes.
+ * App.jsx i dette tilfælde
+ * @returns 
+ */
 
-  const arrDishes = [
-	'Spaghetti & Kødsovs',
-	'Bøf med løg',
-	'Burger med fritter',
-	'Kartoffelsuppe',
-	'Tarteletter'
-  ]
-
+export const Dishes = props => {
   return (
 	<DishesStyle>
-		{arrDishes.map((dish, key) => {
+		{props.data.map((dish, key) => {
 			return (
 				<li key={key}>{dish}</li>
 			)
