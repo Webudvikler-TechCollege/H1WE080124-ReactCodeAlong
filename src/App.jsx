@@ -1,6 +1,7 @@
 import './App.scss'
 import { Container } from './components/Container/Container'
 import { Dishes } from './components/Dishes/Dishes'
+import { Example } from './components/Example/Example'
 import { Footer } from './components/Footer/Footer'
 import { Header } from './components/Header/Header'
 import { Main } from './components/Main/Main'
@@ -27,7 +28,9 @@ function App() {
     <Container width="1024" bgcolor="white">
       <Header />
       <Main>
-        <Dishes data={arrDishes} />
+        <Example color="red" />
+        <Example color="blue" />
+        <Example />
       </Main>
       <Footer />
     </Container>
