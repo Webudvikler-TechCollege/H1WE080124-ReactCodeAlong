@@ -9,7 +9,7 @@ export const ExampleStyled = styled.ul`
 
     li {
         color: ${props => props.color ? props.color : 'black' };
-        
+        ba
         a {
             text-decoration: none
         }

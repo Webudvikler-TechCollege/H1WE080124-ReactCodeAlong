@@ -20,7 +20,11 @@ export const NavBarStyled = styled.nav`
 				padding: 0.8rem;
 				text-decoration: none;
 				color: #000;
+				&.active {
+					color: #f00;
+				}
 			}
 		}
 	}
+
 `

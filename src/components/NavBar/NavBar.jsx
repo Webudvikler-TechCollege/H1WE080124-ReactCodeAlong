@@ -1,12 +1,12 @@
 import { NavBarStyled } from "./NavBar.styled"
+import { NavLink } from 'react-router-dom'
 
 export const NavBar = () => {
   return (
 	<NavBarStyled>
 		<ul>
-			<li><a href="#">Forside</a></li>
-			<li><a href="#">Om os</a></li>
-			<li><a href="#">Produkter</a></li>
+			<li><NavLink to="/">Forside</NavLink></li>
+			<li><NavLink to="/about">Om os</NavLink></li>
 		</ul>
 	</NavBarStyled>
   )
