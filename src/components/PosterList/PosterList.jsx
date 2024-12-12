@@ -1,40 +1,28 @@
-/**
- * PosterList komponentet er et eksempel på hvordan du kan 
- * bruge hooks til at kalde et API i React.
- **/
-import { useState, useEffect } from "react" // Importerer React hooks
-import axios from 'axios' // Importerer Axios Framework til kald af API
-import { PosterListStyle } from "./PosterList.styled"
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 
 export const PosterList = () => {
-    // Sætter state variabel til api data
     const [ apiData, setApiData ] = useState([])
 
-    // Funktion til kald af data
     const getData = async () => {
-        const url = "http://localhost:3000/posters";
-        const result = await axios.get(url)        
+        const url = "http://localhost:3000/posters"
+        const result = await axios.get(url)
+        console.log(result.data);
+        
         setApiData(result.data);
-    }   
+    }
 
-    // useEffect hook til at styre komponentets rendering
     useEffect(() => {
         getData()
     },[setApiData])
-
-  // JSX Output  
-  return (
-    <PosterListStyle>
-        <h1>Plakater</h1>
+    
+    return (
         <ul>
-            {apiData && apiData.map((item, key) => {
+            {apiData && apiData.map((value,index) => {
                 return (
-                    <li key={key}>
-                        {item.name}
-                    </li>
+                    <li key={index}>{value.name}</li>
                 )
             })}
         </ul>
-    </PosterListStyle>
-  )
+    )
 }
